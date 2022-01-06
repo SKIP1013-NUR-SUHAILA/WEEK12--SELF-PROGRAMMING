@@ -1,0 +1,42 @@
+package self_Programmin;
+import java.util.Scanner;
+class Exer3_Display_Middle_Char {
+
+	public static void main(String[] args) {
+		/* Write a Java method to display the middle character of a string. 
+		Note: a) the length of the string is odd, =2 middle char
+			  b)the length of the string is even, = 1 middle char
+	 */
+
+		Scanner sc = new Scanner(System.in);
+		String input;
+	
+		//ask user to input string
+		System.out.println("Please enter something: ");
+		input = sc.nextLine(); //if used (nextLine)..dia akan cari yg tgh2 bagi ayat yg pnjg yg libatkan space.
+							//(next) just akn cari tgh2 for 1 sentence only.
+		
+		String mid = middleCharacte(input); //why dlam tu input? sbb kita nak guna yg user input tu untuk cari jawapan
+		System.out.println("The middle character is: " + mid); 
+
+	}
+
+	public static String middleCharacte(String word) { //at here we use string (word)..dekat atas nama variable ni (input)..isokay
+		  int position;								//why? sbb ia hanya variable..sama macam dekat atas letak (x)..tapi bawah tulis (a)
+	      int length;
+	      String mid;
+	        if (word.length() % 2 == 0)// 
+	        {
+	            position = word.length() / 2 - 1;
+	            length = 2;
+	        }
+	        else
+	        {
+	            position = word.length() / 2;
+	            length = 1;
+	        }
+	        mid = word.substring(position, position + length);
+	        
+	        return mid;
+	}
+}

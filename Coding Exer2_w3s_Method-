@@ -1,0 +1,31 @@
+package self_Programmin;
+
+import java.util.Scanner;
+
+class Exer2_avg_3_num {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double x, y, z; 
+		Scanner in = new Scanner(System.in);
+		
+		//the statement for user to enter data
+		System.out.println("Please enter three numbers:");
+		 x = in.nextDouble();
+		 y = in.nextDouble();
+		 z = in.nextDouble(); 
+		 
+		 double avg = average(x, y, z); // method call yg return.. data type variable = methodname(arg)
+		 System.out.printf("\nThe average of entered number is: %.2f" , avg);
+		 
+	}	 
+		public static double average(double x, double y, double z) {
+			double avg;
+			
+			avg = (x+y+z)/3;
+			return avg;
+		
+	
+		}
+}
